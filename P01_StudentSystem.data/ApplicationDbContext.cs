@@ -9,6 +9,11 @@ namespace P01_StudentSystem.P01_StudentSystem.data
 {
     class ApplicationDbContext : DbContext
     {
+    public DbSet<student> students { get; set; }
+    public DbSet<homework> homeworks { get; set; }
+    public DbSet<resources> resources { get; set; }
+    public DbSet<course> courses { get; set; }
+    public DbSet<StudentCourse> StudentCourses { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -19,3 +24,4 @@ namespace P01_StudentSystem.P01_StudentSystem.data
         }
     }
 }
+
